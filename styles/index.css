@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding:0; 
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif; 
+    font-size: 16px; 
+}
+body{
+    background-color: rgb(82, 95, 34);
+}
+
+.hero-container{
+    height: 100vh;
+    width: min(80% , 1200px);
+    margin: 0 auto; 
+}
+.hero-flex{
+    border: 1px solid black;
+    height: inherit;
+    display:flex; flex-direction: row;
+    align-items: flex-start;
+}
+.output-tasks{
+    width: 50%;
+    height: 100%;
+    overflow: scroll;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 1rem 1rem;
+    background-color: white;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+#task-form{
+    display: inline-block;
+    width: 50%;
+    background-color: white;
+    padding: 1rem 1rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+#task-form h2,.task-h2{
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    background-color: inherit;
+}
+#task-form input{
+    font-size: inherit;
+    padding: 0.75rem .5rem;
+    margin: 0.75rem 0rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+    font-weight: inherit;
+}
+#task-form label{
+    font-weight: inherit;
+    display: inline-block;
+    width: 8rem;
+    font-size: inherit;
+    padding: 0.75rem 0rem;
+    margin: 0.75rem 0rem;
+    border-radius: 5px;
+    background-color: white;
+}
+.js-descrip{
+    border: 1px solid black;
+    font-weight: inherit;
+    display: inline-block;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 7.5rem;
+    max-height: 25rem;
+    font-size: inherit;
+    padding: 0.75rem .5rem;
+    margin: 0.75rem 0rem;
+    border-radius: 5px;
+    background-color: white;
+}
+#priority{
+    width: 17px;
+    height: 17px;
+}
+#task-form button{
+    font-weight: inherit;
+    padding: 0.75rem 1.5rem;
+    margin-top: .75rem;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    float: right;
+    transition: .4s all;
+}
+#task-form button:hover{
+    scale: 1.04;
+    cursor: pointer;
+}
+.js-task{
+    border: 1px solid black;
+    padding: 1rem .5rem;
+    margin-bottom: 1rem;
+    background-color: white;
+    border-radius: 5px;
+    display: flex; flex-direction: row;
+}
+.task-info{
+    width: 75%; 
+}
+.task-info h4{
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+.task-actions{
+    width: 25%;
+}
+
+/* CSS for button */
+.js-delete-task {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  border-radius: 6px;
+  border: none;
+
+  background: #6E6D70;
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.5), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.12);
+  color: #DFDEDF;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.js-delete-task:hover{
+    cursor: pointer;
+    background-color: rgb(59, 59, 59);
+}
