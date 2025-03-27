@@ -1,4 +1,4 @@
-import {todo_list_db} from './data.js';
+
 import { generateRandomID, validateForm} from './utils.js';
 import dayjs from 'https://esm.sh/dayjs'; 
 
@@ -26,7 +26,7 @@ addtask_elem.addEventListener("click", async function() {
         document.querySelector(".js-deadline").value = "";
         document.querySelector("#priority").checked = false;
         try {
-            const response = await fetch("http://localhost:3000/tasks", {
+            const response = await fetch("https://backend-todo-iq4c.onrender.com/tasks", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -48,7 +48,7 @@ let parent_div = document.querySelector(".js-tasks-parent");
  
 function renderTasks(){
     
-    fetch('http://localhost:3000/get-tasks')
+    fetch('https://backend-todo-iq4c.onrender.com/get-tasks')
     .then(response => response.json())
     .then(data => {
         let html = '';
@@ -80,7 +80,7 @@ document.querySelector('.js-tasks-parent').addEventListener('click', function(ev
     if (event.target.classList.contains('js-delete-task')) { // Check if the clicked element is a delete button
         const taskId = event.target.getAttribute('data-task-id'); // Get task ID from data attribute
         console.log(taskId);
-        fetch(`http://localhost:3000/delete-task/${taskId}`, { method: 'DELETE' })
+        fetch(`https://backend-todo-iq4c.onrender.com/delete-task/${taskId}`, { method: 'DELETE' })
         .then(response => response.json())
         .then(data => {
             console.log(data.message);
