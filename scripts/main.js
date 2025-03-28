@@ -15,6 +15,7 @@ addtask_elem.addEventListener("click", async function() {
     
     if(validateForm(task,deadline,descrip)){
         let obj1 = {}; 
+        obj1.id= Math.floor(Math.random() * 1000000);
         obj1.task = task;
         obj1.description = descrip;
         obj1.deadline = deadline;
