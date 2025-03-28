@@ -51,7 +51,8 @@ function renderTasks(){
     fetch('https://backend-todo-iq4c.onrender.com/get-tasks')
     .then(response => response.json())
     .then(data => {
-        let html = '';
+        if(Array.isArray(data)){
+            let html = '';
         data.forEach(task => {
              task.deadline = dayjs(task.deadline).format('YYYY-MM-DD');
              task.created_at = dayjs(task.created_at).format('YYYY-MM-DD');
@@ -71,7 +72,8 @@ function renderTasks(){
             `
             console.log("delete elem"); 
         });
-        parent_div.innerHTML = html; 
+        parent_div.innerHTML = html;
+        } 
     })
     .catch(error => console.error('Error:', error));
 }
