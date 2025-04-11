@@ -4,9 +4,16 @@
     box-sizing: border-box;
     font-family: "Roboto", sans-serif; 
     font-size: 16px; 
+
+        /* CSS HEX */
+    --sky-blue: #8ecae6ff;
+    --blue-green: #219ebcff;
+    --prussian-blue: #023047ff;
+    --selective-yellow: #ffb703ff;
+    --ut-orange: #fb8500ff;
 }
 body{
-    background-color: rgb(82, 95, 34);
+    background-color: var(sky-blue)
 }
 
 .hero-container{
