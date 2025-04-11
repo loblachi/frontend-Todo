@@ -13,7 +13,7 @@
     --ut-orange: #fb8500ff;
 }
 body{
-    background-color: var(sky-blue)
+    background-color: var(--sky-blue);
 }
 
 .hero-container{
